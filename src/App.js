@@ -59,7 +59,7 @@ function App() {
                   <li className="page-item">
                     {pagination > 1 && (
                       <button className="page-link" onClick={pagAnt}>
-                        Anterior
+                       {"<"} Anterior
                       </button>
                     )}
                   </li>
@@ -68,7 +68,7 @@ function App() {
                   </li>
                   <li className="page-item">
                     <button className="page-link" onClick={pagNext}>
-                      Siguiente
+                      Siguiente {">"}
                     </button>
                   </li>
                 </ul>
