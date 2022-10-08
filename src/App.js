@@ -17,6 +17,10 @@ function App() {
     getPhotos();
   }, [pagination]);
 
+  const pagNext = () => setPagination(pagination + 1);
+  const pagAnt = () => setPagination(pagination - 1);
+  console.log(pagination);
+  console.log(photos);
   return (
     <>
       <Navbar />
@@ -53,13 +57,18 @@ function App() {
               <nav aria-label="Page navigation example">
                 <ul className="pagination">
                   <li className="page-item">
-                    <button className="page-link" href="/">
-                      Pagina anterior
-                    </button>
+                    {pagination > 1 && (
+                      <button className="page-link" onClick={pagAnt}>
+                        Anterior
+                      </button>
+                    )}
+                  </li>
+                  <li class="page-item">
+                    <p className="page-link">Pagina {pagination}</p>
                   </li>
                   <li className="page-item">
-                    <button className="page-link" href="/">
-                      Pagina siguiente
+                    <button className="page-link" onClick={pagNext}>
+                      Siguiente
                     </button>
                   </li>
                 </ul>
