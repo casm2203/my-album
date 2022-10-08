@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [photos, setPhotos] = useState([]);
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <div className="row mt-3">
         <div className="col shadow-sm p-3 mb-5 bg-body rounded">
           <div className="container">
