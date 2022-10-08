@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 
+//funcionamiento pruebas de escritorio
+
 function App() {
   const [photos, setPhotos] = useState([]);
   const [pagination, setPagination] = useState(1);
